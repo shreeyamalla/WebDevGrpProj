@@ -5,8 +5,8 @@
 }
 body{
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    /* background-color: #141414;
-    color: #fff; */
+    background-color: #141414;
+    color: #fff;
 }
 .netflix-logo img{
     height: 30px;
@@ -18,24 +18,32 @@ body{
     border-radius: 4px;
     cursor: pointer;
 }
-/* .hero {
-  position: relative;
-  height: 90vh;
-  background: url("../images/hero-section-img.jpg") center/cover no-repeat;
-  color: #fff;
-} */
 .hero{
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    background-image: url("../images/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    color: #fff;
 }
-.hero-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center;
+.hero-content{
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 20%;
+    left: 4%;
+    max-width: 600px;
 }
-
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero-desc {
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+.hero-buttons .btn {
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+}
