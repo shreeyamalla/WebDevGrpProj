@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;800&display=swap">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,26 +37,67 @@
         </div>
     </nav>    
     <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="video/Stranger Things _ Season 1 Recap.mp4" type="video/mp4">
+        </video>
         <div class="hero-content">
-            <!-- <div class="hero-overlay"></div> -->
-            <!-- <div class="hero-image">
-                <img src="images/hero-image.jpg" alt="hero-img">
-            </div> -->
+            <div class="hero-logo">
+                <img src="images/Netflix_2015_logo.svg.png" alt="Netflix">
+            </div>
             <h1 class="hero-title">Stranger Things</h1>
             <p class="hero-desc">
                 Power, ambition, revenge. After his brother's murder, a former gangster returns to the underworld — ready to settle every score.
             </p>
             <div class="hero-buttons">
-                <button class="btn btn-light me-2">
+                <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#playModal">
                     <i class="fas fa-play me-2"></i> Play
                 </button>
-                <button class="btn btn-secondary">
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#playModal">
                     <i class="fas fa-info-circle me-2"></i> More Info
                 </button>
             </div>
         </div>
     </section>
-
+    <div class="modal fade" id="playModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-video">
+                    <button type="button" class="custom-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    <video id="video" preload="metadata">
+                        <source src="video/Stranger Things _ Season 1 Recap.mp4">
+                    </video>
+                    <div class="modal-buttons">
+                        <button class="btn btn-light me-2"><i class="fas fa-play"></i> Play</button>
+                        <button class="btn btn-outline-light me-2"><i class="fas fa-plus"></i></button>
+                        <button class="btn btn-outline-light"><i class="far fa-thumbs-up"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body modal-info-grid">
+                    <div class="modal-left">
+                        <p class="modal-line">2025 Limited Series <span class="label">HD</span></p>
+                        <p class="modal-line"><span class="label">18+</span> Violence, Language, Substances</p>
+                        <p class="modal-desc">Power, ambition, revenge. After his brother's murder, a former gangster returns to the underworld — ready to settle every score.</p>
+                    </div>
+                    <div class="modal-right">
+                        <p class="modal-line"><strong>Cast:</strong> Actor 1, Actor 2, Actor 3</p>
+                        <p class="modal-line"><strong>Genres:</strong> Action, Thriller, Drama</p>
+                        <p class="modal-desc">This show is: Gritty, Dark</p>
+                    </div>
+                </div>
+                <div class="modal-episodes mt-4">
+                    <h5>Episodes</h5>
+                    <div class="episode-item d-flex mb-2">
+                        <img src="images/hero-image.jpg" alt="episode 1" class="episode-img rounded">
+                        <div class="episode-info ms-2">
+                            <h6>1. Episode Title</h6>
+                            <p class="small">After his father is slain, a mysterious man returns...</p>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
